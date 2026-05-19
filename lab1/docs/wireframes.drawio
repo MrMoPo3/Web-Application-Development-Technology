@@ -1,0 +1,31 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Макети сторінок">
+    <mxGraphModel dx="1200" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="nav" value="Навігація: PollCraft | Опитування | Про додаток | Профіль | Вхід/Реєстрація" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#17202a;fontColor=#ffffff;strokeColor=#17202a" vertex="1" parent="1">
+          <mxGeometry x="70" y="40" width="1010" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="pollTitle" value="Робоча сторінка: Конструктор опитувань" style="text;html=1;strokeColor=none;fillColor=none;fontStyle=1;fontSize=18" vertex="1" parent="1">
+          <mxGeometry x="70" y="120" width="420" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="form" value="Форма створення&#xa;- назва питання&#xa;- опис&#xa;- варіант 1&#xa;- варіант 2&#xa;- кнопка створення" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#607080;align=left;spacingLeft=12" vertex="1" parent="1">
+          <mxGeometry x="70" y="175" width="310" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="cards" value="Список опитувань&#xa;- питання&#xa;- варіанти відповідей&#xa;- progress bar статистики&#xa;- кнопка голосування&#xa;- додавання варіанта" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eef6f3;strokeColor=#12715b;align=left;spacingLeft=12" vertex="1" parent="1">
+          <mxGeometry x="430" y="175" width="650" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="auth" value="Реєстрація / Вхід&#xa;Обов'язкові поля згідно завдання. Після успішної дії користувач переходить у профіль." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#607080;align=left;spacingLeft=12" vertex="1" parent="1">
+          <mxGeometry x="70" y="455" width="310" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="profile" value="Профіль користувача&#xa;Таблиця: ім'я, email, стать, дата народження." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#607080;align=left;spacingLeft=12" vertex="1" parent="1">
+          <mxGeometry x="430" y="455" width="300" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="about" value="Про додаток&#xa;Емблема PollCraft, короткий опис, стек: React, Bootstrap, Redux Toolkit." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#607080;align=left;spacingLeft=12" vertex="1" parent="1">
+          <mxGeometry x="780" y="455" width="300" height="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
