@@ -16,12 +16,12 @@ export default function AboutPage() {
         <div>
           <h2>Призначення</h2>
           <p>
-            PollCraft моделює клієнтську частину API-сервісу опитувань. Користувач може створити
-            опитування, додати варіанти відповідей, голосувати та бачити відсоткову статистику.
+            PollCraft моделює клієнтську частину API-сервісу опитувань. Користувач може створити опитування,
+            додати варіанти відповідей, голосувати та бачити відсоткову статистику.
           </p>
           <div className="feature-list">
             <span>
-              <Database size={18} /> Redux Toolkit + localStorage
+              <Database size={18} /> Redux Toolkit + REST API
             </span>
             <span>
               <ShieldCheck size={18} /> Реєстрація та вхід

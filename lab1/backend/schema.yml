@@ -2,7 +2,9 @@ openapi: 3.0.3
 info:
   title: PollCraft API
   version: 1.0.0
-  description: Server API for registration, profiles and poll management.
+  description: "Server API for registration, profiles and poll management.\n\nFunctionality:\n\
+    1. User authentication:\n   - Registration with data validation\n   - Login with\
+    \ token retrieval\n   - Profile management"
 paths:
   /api/about/:
     get:

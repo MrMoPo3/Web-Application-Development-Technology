@@ -15,7 +15,7 @@ export default function ProfilePage() {
   }
 
   const rows = [
-    ['Ім\'я', user.name],
+    ["Ім'я", user.name],
     ['Email', user.email],
     ['Стать', user.gender],
     ['Дата народження', user.birthDate],
@@ -24,7 +24,7 @@ export default function ProfilePage() {
   return (
     <section className="container page-narrow">
       <PageHeader eyebrow="Профіль" title="Дані користувача">
-        Інформація зберігається локально у браузері через Redux Toolkit і localStorage.
+
       </PageHeader>
 
       <div className="table-responsive profile-table">

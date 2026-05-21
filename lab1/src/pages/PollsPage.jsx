@@ -1,8 +1,8 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Plus, Send, Trash2, Vote } from 'lucide-react';
 import { useDispatch, useSelector } from 'react-redux';
 import PageHeader from '../components/PageHeader.jsx';
-import { addOption, addPoll, removePoll, vote } from '../store/pollsSlice.js';
+import { addOption, addPoll, fetchRemotePolls, removePoll, vote } from '../store/pollsSlice.js';
 import { getPollTotalVotes } from '../utils/selectors.js';
 
 const defaultPoll = {
@@ -16,12 +16,20 @@ export default function PollsPage() {
   const [form, setForm] = useState(defaultPoll);
   const [optionTextByPoll, setOptionTextByPoll] = useState({});
   const [message, setMessage] = useState('');
-  const polls = useSelector((state) => state.polls.items);
+  const polls = useSelector((state) => state.polls.items ?? []);
+  const apiStatus = useSelector((state) => state.polls.status ?? 'idle');
+  const apiError = useSelector((state) => state.polls.error);
   const dispatch = useDispatch();
   const totalVotes = useMemo(
     () => polls.reduce((sum, poll) => sum + getPollTotalVotes(poll), 0),
     [polls],
   );
+
+  useEffect(() => {
+    if (apiStatus === 'idle') {
+      dispatch(fetchRemotePolls());
+    }
+  }, [apiStatus, dispatch]);
 
   function updateForm(event) {
     const { name, value } = event.target;
@@ -66,6 +74,13 @@ export default function PollsPage() {
         Створюйте питання, додавайте варіанти відповідей і переглядайте статистику голосування.
       </PageHeader>
 
+      {apiStatus === 'loading' ? <div className="alert alert-secondary">Завантаження опитувань з API...</div> : null}
+      {apiStatus === 'failed' ? (
+        <div className="alert alert-warning">
+          {apiError} Показано локальні дані з Redux/localStorage.
+        </div>
+      ) : null}
+
       <div className="stats-strip">
         <div>
           <span>{polls.length}</span>
@@ -96,7 +111,7 @@ export default function PollsPage() {
             type="text"
             value={form.title}
             onChange={updateForm}
-            placeholder="Наприклад: Який стек обрати?"
+            placeholder="Наприклад: який стек обрати?"
           />
 
           <label className="form-label" htmlFor="description">

@@ -46,7 +46,7 @@ export default function RegisterPage() {
         {error ? <div className="alert alert-danger">{error}</div> : null}
 
         <label className="form-label" htmlFor="name">
-          Ім'я
+          Ім&apos;я
         </label>
         <input
           className="form-control"
